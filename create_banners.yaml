@@ -1,6 +1,7 @@
 ---
 - name: creating
   hosts: ios_devices
+  gather_facts: no
   connection: network_cli
   tasks:
     - name: more stuff
