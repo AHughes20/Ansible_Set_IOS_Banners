@@ -1,0 +1,8 @@
+---
+- name: creating
+  hosts: ios_devices
+  connection: network_cli
+  tasks:
+    - name: more stuff
+      cisco.ios.ios_hostname:
+        #hostname: testingthis

@@ -1,0 +1,9 @@
+[ios_devices]
+r1 ansible_host=10.10.0.1
+   ansible_user=falkor
+   ansible_password=password
+   ansible_connection=network_cli
+   ansible_network_os=cisco.ios
+   ansible_become=yes
+   ansible_become_method=enable
+   ansible_become_pass=enable
