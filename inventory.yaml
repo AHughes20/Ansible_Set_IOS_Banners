@@ -1,11 +1,14 @@
 [ios_devices]
 r1 ansible_host=10.10.0.1
+sw1 ansible_host=10.10.10.51
+rrr ansible_host=10.10.10.55
 
 [ios_devices:vars]
 ansible_user=falkor
 ansible_password=password
 ansible_connection=network_cli
 ansible_network_os=cisco.ios.ios
+ansible_network_cli_ssh_type=libssh
 ansible_become=yes
 ansible_become_method=enable
 ansible_become_pass=enable

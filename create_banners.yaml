@@ -2,8 +2,16 @@
 - name: creating
   hosts: ios_devices
   gather_facts: no
-  connection: network_cli
+#  connection: network_cli
   tasks:
-    - name: more stuff
-      cisco.ios.ios_hostname:
-        #hostname: testingthis
+    - name: remove exec banner
+      cisco.ios.ios_banner:
+        #config:
+          #hostname: "{{ inventory_hostname }}"
+        banner: "exec"
+        state: "absent"
+
+    - name: remove incoming banner
+      cisco.ios.ios_banner:
+        banner: "incoming"
+        state: "absent"
