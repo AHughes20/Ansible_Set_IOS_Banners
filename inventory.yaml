@@ -1,7 +1,7 @@
 [ios_devices]
-r1 ansible_host=10.10.0.1
+edge1 ansible_host=10.10.0.1
 sw1 ansible_host=10.10.10.51
-rrr ansible_host=10.10.10.55
+edge2 ansible_host=10.10.10.55
 
 [ios_devices:vars]
 ansible_user=falkor
