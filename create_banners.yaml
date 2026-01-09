@@ -1,37 +1,29 @@
 ---
-- name: creating
+- name: Starting
   hosts: ios_devices
   gather_facts: no
-#  cisco.ios.ios_banner:
   tasks:
     - name: Adding Login Banner
       cisco.ios.ios_banner:
-        #config:
-          #hostname: "{{ inventory_hostname }}"
         banner: "login"
         text: | 
           *******************************************************        
-          If you are reading this, that means playbook was
-          successful and the login banner has properly displayed
+          Add Login banner message here
           *******************************************************
 
-    - name: Adding MOTD
-      cisco.ios.ios_banner:
-        banner: "motd"
-        text: |
-          *******************************************************
-          This is the motd banner so must be success
-          *******************************************************
+   # - name: Adding MOTD
+    #  cisco.ios.ios_banner:
+     #   banner: "motd"          
+      #  text: |
+       #   *******************************************************
+        #  Add MOTD banner message here
+         # *******************************************************
 
-    - name: Adding exec banner
-      cisco.ios.ios_banner:
-        banner: "exec"
-        text: |
-          *******************************************************
-          * This is the exec banner when using enable command
-          *******************************************************
+   # - name: Adding exec banner
+    #  cisco.ios.ios_banner:
+     #   banner: "exec"
+      #  text: |
+       #   *******************************************************
+        #  Add exec banner message here
+         # *******************************************************
 
- #   - name: remove incoming banner
-  #    cisco.ios.ios_banner:
-   #     banner: "incoming"
-    #    state: "absent"
