@@ -12,21 +12,21 @@
           Add Login banner message here
           *******************************************************
 
-  #  - name: Adding MOTD
-   #   cisco.ios.ios_banner:
-    #    banner: "motd" 
-     #   state: "present"         
-      #  text: |
-       #   *******************************************************
-        #  Add MOTD banner message here
-         # *******************************************************
+    - name: Adding MOTD
+      cisco.ios.ios_banner:
+        banner: "motd" 
+        state: "present"         
+        text: |
+          *******************************************************
+          Add MOTD banner message here
+          *******************************************************
 
-  #  - name: Adding exec banner
-   #   cisco.ios.ios_banner:
-    #    banner: "exec"
-     #   state: "present"
-      #  text: |
-       #   *******************************************************
-        #  Add exec banner message here
-         # *******************************************************
+    - name: Adding exec banner
+      cisco.ios.ios_banner:
+        banner: "exec"
+        state: "present"
+        text: |
+          *******************************************************
+          Add exec banner message here
+          *******************************************************
 
